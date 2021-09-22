@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Blocal</string>
+    <string name="title_list">Item List</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_scrolling" translatable="false">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_description">Description</string>
+    <string name="label_name">Name</string>
+    <string name="label_code">Code</string>
+    <string name="btn_save">Save</string>
+    <string name="lbl_price">Price</string>
+    <string name="lbl_description">Description</string>
+    <string name="title_save">Save</string>
+    <string name="title_product_detail">Product Detail</string>
+    <string name="lbl_in_stock">In stock</string>
+    <string name="lbl_out_stock">Out of stock</string>
+    <string name="title_edit">Edit</string>
+    <string name="title_change_photo">Change photo</string>
+    <string name="lbl_take_photo">Take photo</string>
+    <string name="lbl_choose_photo">Choose photo</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string-array name="array_choose_photo">
+        <item>@string/lbl_take_photo</item>
+        <item>@string/lbl_choose_photo</item>
+    </string-array>
+    <string name="lbl_logout">Logout</string>
+
+    <string name="capture">Capture</string>
+    <string name="preview_area">Preview area</string>
+
+    <string name="title_maps">Maps</string>
+    <string name="title_stores">Stores</string>
+    <string name="title_search">Search</string>
+    <string name="title_shopping_lists">Shopping Lists</string>
+    <string name="txt_store_list_distance">Show stores in distance of</string>
+    <string name="title_store_list">Stores</string>
+    <string name="title_store_detail">Store Detail</string>
+    <string name="title_item_detail">Item detail</string>
+
+    <string name="user_nav_drawer_open">Drawer opens</string>
+    <string name="user_nav_drawer_close">Drawer closes</string>
+    <string name="snackbar_maps_location_needed">Location permission is required for the usage of the map!</string>
+    <string name="snackbar_maps_location_try_again">Try again</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="descr_create_my_store">Create and manage your own store so that your business can grow exponentially</string>
+    <string name="descr_slogan">You do what you\'ve been doing, we\'ll just let the world know</string>
+    <string name="btn_create_store">Create my store</string>
+    <string name="lbl_use_location">Use this location?</string>
+    <string name="lbl_change_loc">Change Location</string>
+    <string name="lbl_select">Select</string>
+    <string name="title_create_store">Create Store</string>
+    <string name="lbl_location">Location</string>
+    <string name="title_location_picker">Location Picker</string>
+    <string name="lbl_create_my_store">Create My Store</string>
+    <string name="err_required">Field required</string>
+    <string name="err_image_required">Image is required</string>
+    <string name="err_loc_required">Location required</string>
+    <string name="title_my_store">My Store</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_account">Account</string>
+    <string name="lbl_show_items">What do we offer?</string>
+    <string name="err_stores_load">Stores couldn\'t load correctly</string>
+    <string name="lbl_close">Close</string>
+    <string name="view_store">View Store</string>
+    <string name="lbl_stub_data">Stub data, feature coming soon!</string>
+    <string name="title_barcode_scanner">Barcode Scanner</string>
+    <string name="title_find_item">Find Item</string>
+    <string name="err_item_not_found">Item not found</string>
+    <string name="lbl_connection_info">Connection Info</string>
+    <string name="btn_check_connection">Check connection</string>
+    <string name="snackbar_connection_info">Fetching connection information.</string>
+    <string name="user_visits">User visits</string>
+    <string name="presents">Presents</string>
+    <string name="necessities">Necessities</string>
+    <string name="electronics">Electronics</string>
+    <string name="outcome">Outcome</string>
+    <string name="snackbar_calculation_location">Distance calculation cannot work without location permission!</string>
+    <string name="no_connection">No internet connection!</string>
+    <string name="network_type">Network type: </string>
+    <string name="wifi_link_speed">WiFi Link Speed: </string>
+    <string name="wifi_frequency">WiFi Frequency: </string>
+    <string name="network_subtype">Network subtype: </string>
+    <string name="blocal_is_running">Blocal is running</string>
+
+
+</resources>

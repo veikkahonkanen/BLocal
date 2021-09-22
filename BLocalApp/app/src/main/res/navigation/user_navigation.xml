@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation"
+    android:label="@string/title_my_store"
+    app:startDestination="@id/navigation_store_analytics">
+
+    <fragment
+        android:id="@+id/navigation_store_analytics"
+        android:name="com.bteam.blocal.ui.user.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/openMaps"
+            app:destination="@id/navigation_maps" />
+        <action
+            android:id="@+id/openItemList"
+            app:destination="@id/my_store_item_list" />
+        <action
+            android:id="@+id/openShoppingLists"
+            app:destination="@id/navigation_shopping_lists" />
+        <action
+            android:id="@+id/openStoreList"
+            app:destination="@id/navigation_store_list" />
+    </fragment>
+    <dialog
+        android:id="@+id/navigation_confirm_location"
+        android:name="com.bteam.blocal.ui.shared.ConfirmPlaceDialog"
+        tools:layout="@layout/partial_confirm_location">
+
+        <argument
+            android:name="pos"
+            app:argType="com.google.android.gms.maps.model.LatLng" />
+        <argument
+            android:name="address"
+            app:argType="string" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/navigation_maps"
+        android:name="com.bteam.blocal.ui.user.map.StoresMapFragment"
+        android:label="@string/title_maps"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/openStoreDetailFromMaps"
+            app:destination="@id/navigation_store_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_store_list"
+        android:name="com.bteam.blocal.ui.user.store_list.StoreListFragment"
+        android:label="@string/title_store_list"
+        tools:layout="@layout/fragment_store_list">
+        <action
+            android:id="@+id/openStoreDetailFromList"
+            app:destination="@id/navigation_store_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/my_store_item_list"
+        android:name="com.bteam.blocal.ui.user.ItemListUserFragment"
+        android:label="@string/title_list"
+        tools:layout="@layout/fragment_item_list">
+
+        <argument
+            android:name="storeUid"
+            app:argType="string" />
+        <action
+            android:id="@+id/showItemDetail"
+            app:destination="@id/navigation_item_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_shopping_lists"
+        android:name="com.bteam.blocal.ui.user.shopping_lists.ShoppingListsFragment"
+        android:label="@string/title_shopping_lists"
+        tools:layout="@layout/fragment_shopping_lists" />
+
+    <fragment
+        android:id="@+id/navigation_store_detail"
+        android:name="com.bteam.blocal.ui.user.store_detail.StoreDetailFragment"
+        android:label="@string/title_store_detail"
+        tools:layout="@layout/fragment_store_detail">
+
+        <argument
+            android:name="storeUid"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/showStoreItems"
+            app:destination="@id/my_store_item_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_item_detail"
+        android:name="com.bteam.blocal.ui.user.ItemDetailUserFragment"
+        android:label="@string/title_item_detail"
+        tools:layout="@layout/fragment_item_detail">
+
+        <argument
+            android:name="itemUid"
+            app:argType="string" />
+        <argument android:name="storeUid" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_my_store_fragment"
+        android:name="com.bteam.blocal.ui.user.my_store.MyStoreFragment"
+        android:label="@string/title_my_store"
+        tools:layout="@layout/fragment_my_store">
+        <action
+            android:id="@+id/action_navigation_my_store_fragment_to_createStoreFragment"
+            app:destination="@id/createStoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createStoreFragment"
+        android:name="com.bteam.blocal.ui.shared.create_store.CreateStoreFragment"
+        android:label="@string/title_create_store"
+        tools:layout="@layout/fragment_create_store">
+        <action
+            android:id="@+id/action_createStoreFragment_to_placePickerFragment"
+            app:destination="@id/navigation_place_picker" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_place_picker"
+        android:name="com.bteam.blocal.ui.shared.place_picker.PlacePickerFragment"
+        android:label="@string/title_location_picker"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/confirmLocation"
+            app:destination="@id/navigation_confirm_location" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_user_settings"
+        android:name="com.bteam.blocal.ui.user.user_settings.UserSettingsFragment"
+        android:label="@string/title_settings" >
+
+        <action
+            android:id="@+id/openUserConnectionInfo"
+            app:destination="@id/navigation_user_connection_info" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_connection_info"
+        android:name="com.bteam.blocal.ui.user.UserConnectionInfoFragment"
+        android:label="@string/lbl_connection_info"
+        tools:layout="@layout/fragment_connection_info"/>
+</navigation>

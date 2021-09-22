@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "192061326559",
+    "firebase_url": "https://blocal-a2c5a.firebaseio.com",
+    "project_id": "blocal-a2c5a",
+    "storage_bucket": "blocal-a2c5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192061326559:android:535a77b1e3c2bf7c61156a",
+        "android_client_info": {
+          "package_name": "com.bteam.blocal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192061326559-ht3bud9gcjkfsna66dnr6fscq6d3i6n6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPgicEXbQtR71qozkQGR1ojVl7IZAr8kQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192061326559-ht3bud9gcjkfsna66dnr6fscq6d3i6n6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

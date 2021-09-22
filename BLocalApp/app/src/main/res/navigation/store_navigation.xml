@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/store_navigation"
+    app:startDestination="@+id/my_store_item_list">
+
+    <fragment
+        android:id="@+id/my_store_item_list"
+        android:name="com.bteam.blocal.ui.store.ItemListStoreFragment"
+        android:label="@string/title_list"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/showItemDetail"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/goToEdit"
+            app:destination="@id/editItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_store_analytics"
+        android:name="com.bteam.blocal.ui.store.StoreAnalyticsFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_store_analytics" />
+
+    <fragment
+        android:id="@+id/navigation_store_settings"
+        android:name="com.bteam.blocal.ui.store.store_settings.StoreSettingsFragment"
+        android:label="@string/title_settings">
+
+        <action
+            android:id="@+id/openStoreConnectionInfo"
+            app:destination="@id/navigation_store_connection_info" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_store_connection_info"
+        android:name="com.bteam.blocal.ui.store.StoreConnectionInfoFragment"
+        android:label="@string/lbl_connection_info"
+        tools:layout="@layout/fragment_connection_info"/>
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.bteam.blocal.ui.store.ItemDetailStoreFragment"
+        android:label="fragment_item_detail"
+        tools:layout="@layout/fragment_item_detail" >
+        <action
+            android:id="@+id/editItem"
+            app:destination="@id/editItemFragment" />
+        <argument
+            android:name="itemUid"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/editItemFragment"
+        android:name="com.bteam.blocal.ui.store.edit_item.EditItemFragment"
+        android:label="fragment_edit_item"
+        tools:layout="@layout/fragment_edit_item">
+        <argument
+            android:name="itemUid"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_editItemFragment_to_cameraView2"
+            app:destination="@id/navigation_bar_scanner" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_bar_scanner"
+        android:name="com.bteam.blocal.ui.store.CameraFragment"
+        android:label="CameraView"
+        tools:layout="@layout/fragment_camera_view"/>
+    <fragment
+        android:id="@+id/navigation_item_finder"
+        android:name="com.bteam.blocal.ui.store.item_finder.ItemFinderFragment"
+        android:label="ItemFinderFragment"
+        tools:layout="@layout/fragment_camera_view">
+        <action
+            android:id="@+id/goToItem"
+            app:destination="@id/itemDetailFragment"
+            app:popUpTo="@id/navigation_item_finder"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

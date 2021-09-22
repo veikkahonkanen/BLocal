@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.bteam.blocal.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_mainStoreFragment"
+            app:destination="@id/mainStoreFragment"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_mainUserFragment"
+            app:destination="@id/mainUserFragment"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainStoreFragment"
+        android:name="com.bteam.blocal.ui.store.main_store.MainStoreFragment"
+        android:label="MainStoreFragment"
+        tools:layout="@layout/fragment_main_store"/>
+    <action
+        android:id="@+id/action_global_login"
+        app:destination="@id/login"
+        app:popUpTo="@id/main_navigation"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/mainUserFragment"
+        android:name="com.bteam.blocal.ui.user.main_user.MainUserFragment"
+        android:label="MainUserFragment"
+        tools:layout="@layout/fragment_main_user">
+        <action
+            android:id="@+id/action_mainUserFragment_to_mainStoreFragment"
+            app:destination="@id/mainStoreFragment" />
+    </fragment>
+</navigation>
